@@ -5,6 +5,11 @@ Materia: Criptografía
 Proyecto: Simulación Interactiva de Criptosistemas de Clave Pública
 """
 
+# Módulo para la simulación del algoritmo RSA
+# Importa las librerías necesarias para la interfaz gráfica y la lógica de RSA
+# Define la clase RSAGUI para la interacción con el usuario y la simulación
+# Incluye métodos para generar claves, cifrar, descifrar y mostrar resultados
+
 import tkinter as tk
 from tkinter import ttk, messagebox
 from Crypto.Util import number

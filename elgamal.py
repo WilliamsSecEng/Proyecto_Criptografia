@@ -5,6 +5,11 @@ Materia: Criptografía
 Proyecto: Simulación Interactiva de Criptosistemas de Clave Pública
 """
 
+# Módulo para la simulación del algoritmo ElGamal
+# Importa las librerías necesarias para la interfaz gráfica y la lógica de ElGamal
+# Define la clase ElGamalGUI para la interacción con el usuario y la simulación
+# Incluye métodos para generar claves, cifrar, descifrar y mostrar resultados
+
 import math
 import tkinter as tk
 from tkinter import ttk, messagebox

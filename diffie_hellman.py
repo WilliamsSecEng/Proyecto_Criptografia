@@ -5,6 +5,11 @@ Materia: Criptografía
 Proyecto: Simulación Interactiva de Criptosistemas de Clave Pública
 """
 
+# Módulo para la simulación del protocolo Diffie-Hellman
+# Importa las librerías necesarias para la interfaz gráfica y la lógica del protocolo
+# Define la clase DiffieHellmanGUI para la interacción con el usuario y la simulación
+# Incluye métodos para generar claves, calcular valores compartidos y mostrar resultados
+
 import tkinter as tk
 from tkinter import ttk
 from Crypto.Util import number
