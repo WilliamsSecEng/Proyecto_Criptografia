@@ -24,10 +24,19 @@ class MainApplication:
         # Frame principal que contiene todos los widgets
         main_frame = ttk.Frame(self.root, padding="20")
         main_frame.pack(fill=tk.BOTH, expand=True)
+
+        # Encabezado con los datos del proyecto
+        encabezado = (
+            "Nombre Completo: Williams Tapia Caceres\n"
+            "Carrera: Informatica\n"
+            "Materia: Criptografía\n"
+            "Proyecto: Simulación Interactiva de Criptosistemas de Clave Pública"
+        )
+        ttk.Label(main_frame, text=encabezado, font=('Helvetica', 10), justify=tk.LEFT).pack(pady=(0, 10), anchor='w')
         
         # Título de la aplicación
         ttk.Label(main_frame, text="Seleccione un Criptosistema", 
-                 font=('Helvetica', 14, 'bold')).pack(pady=10)
+                 font=('Comic Sans MS', 14, 'bold')).pack(pady=10)
         
         # Definición de los botones para cada criptosistema
         buttons = [

@@ -13,7 +13,6 @@ Proyecto: Simulación Interactiva de Criptosistemas de Clave Pública
 import math
 import tkinter as tk
 from tkinter import ttk, messagebox
-#from Crypto.Util import number  # Removed unused import
 import random
 import sys
 
