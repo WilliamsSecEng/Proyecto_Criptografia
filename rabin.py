@@ -179,3 +179,10 @@ class RabinGUI:
         else:
             g, y, x = RabinGUI.extended_gcd(b % a, a)
             return (g, x - (b // a) * y, y)
+
+# La clase RabinGUI implementa la simulación del algoritmo Rabin.
+# Permite al usuario generar claves públicas y privadas a partir de dos primos p y q.
+# Calcula n = p*q como clave pública. La clave privada son los primos p y q.
+# Para cifrar, toma un mensaje m y calcula c = m^2 mod n.
+# Para descifrar, resuelve la raíz cuadrada modular de c para obtener hasta cuatro posibles mensajes originales.
+# La interfaz permite ingresar parámetros, ver resultados y simular el proceso completo de cifrado y descifrado.

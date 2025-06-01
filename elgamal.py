@@ -175,3 +175,10 @@ class ElGamalGUI:
         else:
             g, y, x = ElGamalGUI.extended_gcd(b % a, a)
             return (g, x - (b // a) * y, y)
+
+# La clase ElGamalGUI implementa la simulación del algoritmo ElGamal.
+# Permite al usuario generar claves públicas y privadas usando un primo p, una base g y un secreto x.
+# Calcula la clave pública y = g^x mod p.
+# Para cifrar, elige un valor aleatorio k, calcula c1 = g^k mod p y c2 = m * y^k mod p.
+# Para descifrar, calcula m = c2 * (c1^x)^-1 mod p.
+# La interfaz guía al usuario en cada paso y muestra los valores generados y resultados de cifrado/descifrado.

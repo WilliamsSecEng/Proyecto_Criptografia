@@ -121,3 +121,10 @@ class DiffieHellmanGUI:
             self.shared_key_label.config(text=f"Clave compartida: {self.shared_key}")
         except ValueError:
             tk.messagebox.showerror("Error", "Ingrese una clave pública válida")
+
+# La clase DiffieHellmanGUI implementa la simulación del protocolo Diffie-Hellman.
+# Permite a dos usuarios generar una clave secreta compartida a través de un canal inseguro.
+# El usuario ingresa los parámetros p (primo) y g (base), y su secreto privado a.
+# Se calcula la clave pública A = g^a mod p y se intercambia con el otro usuario.
+# Finalmente, ambos usuarios calculan la clave secreta compartida K = B^a mod p.
+# La interfaz permite visualizar cada paso y los valores generados.

@@ -199,3 +199,11 @@ class RSAGUI:
         else:
             g, y, x = RSAGUI.extended_gcd(b % a, a)
             return (g, x - (b // a) * y, y)
+
+# La clase RSAGUI implementa la simulación del algoritmo RSA.
+# Permite al usuario generar claves públicas y privadas a partir de dos primos p y q.
+# Calcula n = p*q y φ(n) = (p-1)*(q-1). El usuario elige un exponente público e coprimo con φ(n).
+# Calcula el exponente privado d como el inverso modular de e módulo φ(n).
+# Para cifrar, toma un mensaje m y calcula c = m^e mod n usando la clave pública del destinatario.
+# Para descifrar, toma el mensaje cifrado c y calcula m = c^d mod n usando la clave privada.
+# La interfaz permite ingresar parámetros, ver resultados y simular el intercambio de claves públicas.
