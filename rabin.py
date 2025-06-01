@@ -26,12 +26,16 @@ class RabinGUI:
         self.setup_ui()
         
     def setup_ui(self):
-        # Configuración de colores personalizados
-        bg_color = "#f0f0f0" if self.user == "Usuario A" else "#f0e0f0"
+        # Paleta de colores personalizada
+        bg_color = "#f5f7fa"  # Fondo principal (gris claro)
+        accent = "#5d75cc" if self.user == "Usuario A" else "#77da77"  # Azul o verde según usuario
+        button_color = "#f7c873"  # Amarillo suave para botones
+        style = ttk.Style()
+        style.configure("Main.TFrame", background=bg_color)
+        style.configure("Main.TLabel", background=bg_color)
+        style.configure("Main.TButton", background=button_color)
         self.master.configure(bg=bg_color)
-        
-        # Frame principal
-        main_frame = ttk.Frame(self.master, padding="15")
+        main_frame = ttk.Frame(self.master, padding="15", style="Main.TFrame")
         main_frame.pack(fill=tk.BOTH, expand=True)
         
         # Título

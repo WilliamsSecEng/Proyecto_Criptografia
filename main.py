@@ -21,8 +21,18 @@ class MainApplication:
         self.setup_ui()  # Inicializa la interfaz de usuario
         
     def setup_ui(self):
+        # Paleta de colores personalizada
+        bg_color = "#f5f7fa"  # Fondo principal (gris claro)
+        accent_a = "#5d75cc"   # Azul para Usuario A
+        accent_b = "#77da77"   # Verde para Usuario B
+        button_color = "#f7c873"  # Amarillo suave para botones
+        self.root.configure(bg=bg_color)
         # Frame principal que contiene todos los widgets
-        main_frame = ttk.Frame(self.root, padding="20")
+        style = ttk.Style()
+        style.configure("Main.TFrame", background=bg_color)
+        style.configure("Main.TLabel", background=bg_color)
+        style.configure("Main.TButton", background=button_color)
+        main_frame = ttk.Frame(self.root, padding="20", style="Main.TFrame")
         main_frame.pack(fill=tk.BOTH, expand=True)
 
         # Encabezado con los datos del proyecto
@@ -32,11 +42,11 @@ class MainApplication:
             "Materia: Criptografía\n"
             "Proyecto: Simulación Interactiva de Criptosistemas de Clave Pública"
         )
-        ttk.Label(main_frame, text=encabezado, font=('Helvetica', 10), justify=tk.LEFT).pack(pady=(0, 10), anchor='w')
+        ttk.Label(main_frame, text=encabezado, font=('Helvetica', 10), justify=tk.LEFT, style="Main.TLabel").pack(pady=(0, 10), anchor='w')
         
         # Título de la aplicación
         ttk.Label(main_frame, text="Seleccione un Criptosistema", 
-                 font=('Comic Sans MS', 14, 'bold')).pack(pady=10)
+                 font=('Comic Sans MS', 14, 'bold'), style="Main.TLabel").pack(pady=10)
         
         # Definición de los botones para cada criptosistema
         buttons = [
@@ -48,7 +58,7 @@ class MainApplication:
         
         # Creación y disposición de los botones en la interfaz
         for text, command in buttons:
-            btn = ttk.Button(main_frame, text=text, command=command)
+            btn = ttk.Button(main_frame, text=text, command=command, style="Main.TButton")
             btn.pack(fill=tk.X, pady=5)
     
     # Métodos para abrir las ventanas de cada criptosistema
